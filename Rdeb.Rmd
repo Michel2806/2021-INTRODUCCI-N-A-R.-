@@ -1,0 +1,85 @@
+---
+title: "IntroduccionR"
+author: "Michelle Rivera"
+date: "26/2/2022"
+output: 
+ html_document:
+    fig_height: 6
+    fight_width: 8
+    theme: journal
+    highlight: zenburn
+    toc: yes
+    toc_depht: 4
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Resolucion de ejercicios 
+### Ejercicio 1
+
+```{r Ejercicio 1}
+# Ejercicio 1:
+
+ciudad <- "Quito"
+
+print(ciudad)
+
+```
+### Ejercicio 2:
+
+```{r Ejerc2}
+
+# Ejercicio2:
+
+pais_andes <- c("Argentina", "Bolivia", "Ecuador", "Colombia", "Venezuela", "Peru", "Chile")
+
+print(pais_andes)
+
+```
+### Ejercicio 3:
+
+```{r Ejerc3}
+
+### Ejercicio3:
+
+Costo_viaje = data.frame(lista_ciudades = paste0("N.ciudades", 1:12), Nombre = c("Quito", "Tena", "Puyo", "Riobamba", "Tulcan", "Coca", "Ibarra", "Ambato", "Latagunga", "Cuenca", "Guayaquil", "Manta"), Distancia_Km = c(300, 150, 80, 60, 90, 110, 100, 75, 30, 140, 54, 73), Costo_dinero = sample(5:15, 4, replace = TRUE), Recomendacion_ciudad =sample(1:10, 12, replace = TRUE) )
+
+Costo_viaje 
+```
+### Ejecicio 4:
+
+* Ejecicio 4.1:
+
+```{r Ejerc41}
+
+# Ejercicio 4.1:
+
+# dataset "DNase"
+?DNase
+
+print(head(DNase, 4))
+
+concentration = subset(DNase, conc >= 0.1 & conc <= 0.2)
+
+print(concentration)
+
+```
+```{r Ejerc42}
+
+# Ejercicio 4.2:
+
+# dataset "DNase"
+
+?DNase
+
+concentration = subset(DNase, Run != 10 & conc > 0.2 & density <= 1.0)
+
+print(concentration)
+
+```
